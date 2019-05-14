@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GraphQL.Types;
+﻿using GraphQL.Types;
 using Orders.Models;
 
-namespace Orders.Schema
+namespace Orders.GraprhQlTypes.Order
 {
 	public class OrderEventType : ObjectGraphType<OrderEvent>
 	{

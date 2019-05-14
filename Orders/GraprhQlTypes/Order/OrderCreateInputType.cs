@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using GraphQL.Types;
+﻿using GraphQL.Types;
 
-namespace Orders.Schema
+namespace Orders.GraprhQlTypes.Order
 {
     public class OrderCreateInputType: InputObjectGraphType
     {

@@ -1,6 +1,6 @@
 ﻿using GraphQL.Types;
 
-namespace Orders.Schema
+namespace Orders.GraprhQlTypes.Order
 {
     public class OrderStatusesEnum : EnumerationGraphType
     {

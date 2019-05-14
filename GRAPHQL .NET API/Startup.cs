@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Orders.GraprhQlTypes.Order;
 using Orders.Schema;
 using Orders.Services;
 
@@ -27,12 +28,12 @@ namespace GRAPHQL_.NET_API
 			services.AddSingleton<IOrderService, OrderService>();
 			services.AddSingleton<ICustomerService, CustomerService>();
 			services.AddSingleton<IOrderEventService, OrderEventService>();
-			services.AddSingleton<ISchema, OrdersSchema>();
+			services.AddSingleton<ISchema, Scheme>();
 			services.AddSingleton<OrderType>();
 			services.AddSingleton<CustomerType>();
 			services.AddSingleton<OrderStatusesEnum>();
 			services.AddSingleton<OrdersQuery>();
-			services.AddSingleton<OrdersSchema>();
+			services.AddSingleton<Scheme>();
 			services.AddSingleton<OrderCreateInputType>();
 			services.AddSingleton<OrdersMutation>();
 			services.AddSingleton<OrdersSubscription>();
@@ -52,8 +53,8 @@ namespace GRAPHQL_.NET_API
 			app.UseDefaultFiles();
 			app.UseStaticFiles();
 			app.UseWebSockets();
-			app.UseGraphQLWebSockets<OrdersSchema>();
-			app.UseGraphQL<OrdersSchema>();
+			app.UseGraphQLWebSockets<Scheme>();
+			app.UseGraphQL<Scheme>();
 			app.UseMvc();
 		}
 	}

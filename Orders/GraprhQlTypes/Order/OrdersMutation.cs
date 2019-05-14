@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using GraphQL.Types;
 using Orders.Models;
 using Orders.Services;
 
-namespace Orders.Schema
+namespace Orders.GraprhQlTypes.Order
 {
     public class OrdersMutation : ObjectGraphType<object>
     {
@@ -22,7 +20,7 @@ namespace Orders.Schema
                 {
                     var orderInput = context.GetArgument<OrderCreateInput>("order");
                     var id = Guid.NewGuid().ToString();
-                    var order = new Order(orderInput.Name, orderInput.Description, orderInput.Created, orderInput.CustomerId, id);
+                    var order = new Models.Order(orderInput.Name, orderInput.Description, orderInput.Created, orderInput.CustomerId, id);
                     return orders.CreateAsync(order);
                 }
             );

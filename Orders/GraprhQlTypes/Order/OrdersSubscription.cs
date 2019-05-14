@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reactive.Linq;
-using System.Text;
 using GraphQL.Resolvers;
 using GraphQL.Subscription;
 using GraphQL.Types;
 using Orders.Models;
 using Orders.Services;
 
-namespace Orders.Schema
+namespace Orders.GraprhQlTypes.Order
 {
 	public class OrdersSubscription : ObjectGraphType<object>
 	{
