@@ -6,12 +6,14 @@ using GraphQL.Instrumentation;
 using GraphQL.Types;
 using GraphQL.Validation.Complexity;
 using GRAPHQL_.NET_API.GrapthQl;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 // ReSharper disable InconsistentNaming
 
 namespace GRAPHQL_.NET_API.Controllers
 {
+	[EnableCors("AllowMyOrigin")]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class GraphQLEndPointController : ControllerBase

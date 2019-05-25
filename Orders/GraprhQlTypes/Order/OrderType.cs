@@ -1,4 +1,5 @@
 ﻿using GraphQL.Types;
+using Orders.GraprhQlTypes.Customer;
 using Orders.Schema;
 using Orders.Services;
 
